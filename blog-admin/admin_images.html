@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>blog-admin-article</title>
+	<link href="./css/bootstrap.css" rel="stylesheet" >
+	<link href="./css/admin_common.css" rel="stylesheet">
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script src="./js/bootstrap.js"></script>
+
+	<link href="./css/images.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+
+
+<div id="container-left">
+
+	<div id="admin-logo">
+		<img src="https://pigjian.com/images/default_avatar.png" alt="">
+	</div>
+
+	<div id="left-nav">
+
+		<a href="#" class="nav-a">
+			<div class="nav-item">
+				<span class="glyphicon glyphicon-th-list margin-right-10"></span>   
+				  图片管理 
+				<span class="glyphicon glyphicon-chevron-right set-right"></span>
+			</div>
+		</a>
+
+		<a href="#" class="nav-a">
+			<div class="nav-item">
+				<span class="glyphicon glyphicon-th-list margin-right-10"></span>   
+				  文章管理
+				<span class="glyphicon glyphicon-chevron-right set-right"></span>
+			</div>
+		</a>
+
+		<a href="#" class="nav-a">
+			<div class="nav-item">
+				<span class="glyphicon glyphicon-th-list margin-right-10"></span>
+				  我是导航
+				<span class="glyphicon glyphicon-chevron-right set-right"></span>
+			</div>
+		</a>
+
+	</div>
+
+</div>
+
+<div id="container">
+
+	<!-- pc header nav-->
+	<div id="blog-header">
+		<div id="blog-nav">
+			<!-- <div id="left-nav">
+				<div class="item-nav"><a href="#">首页</a></div>
+				<div class="item-nav"><a href="#">文章</a></div>
+				<div class="item-nav"><a href="#">标签</a></div>
+				<div class="item-nav"><a href="#">分享</a></div>
+			</div> -->
+			<div id="right-nav">
+				<div class="item-nav"><a href="#">注册</a></div>
+				<div class="item-nav"><a href="#">登录</a></div>
+				<div class="search"><input type="text" placeholder="search"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- mobile nav -->
+	<nav class="navbar navbar-default" id="mobile-nav" role="navigation">
+		<div class="container-fluid"> 
+			<div class="navbar-header" id="mobile-header">
+				<button id="cc-button-nav" type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#chicho-navbar-collapse">
+					<span class="icon-bar" style="background-color: #fff;"></span>
+					<span class="icon-bar" style="background-color: #fff;"></span>
+					<span class="icon-bar" style="background-color: #fff;"></span>
+				</button>
+				<a class="navbar-brand" style="color: #fff;" href="#">chicho</a>
+			</div>
+			<div class="collapse navbar-collapse" id="chicho-navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#" style="color: #fff;">首页</a></li>
+					<li><a href="#" style="color: #fff;">文章</a></li>
+					<li><a href="#" style="color: #fff;">标签 </a></li>
+					<li><a href="#" style="color: #fff;">分享 </a></li>
+					<li><a href="#" style="color: #fff;">登录 </a></li>
+					<li><a href="#" style="color: #fff;">注册 </a></li>
+				</ul>
+			</div>
+		</div>
+	</nav> 
+
+	<!-- 面包屑导航  -->
+	<ol class="breadcrumb margin-bottom-0">
+	    <li><a href="#">Home</a></li>
+	    <li><a href="#">图片</a></li>
+	    <li class="active">图片管理</li>
+	</ol>
+
+
+
+	<div class="container" style="margin-bottom: 30px;">
+		
+		<div class="image-item">
+			<div class="img-box">
+				<img src="http://www.17sucai.com/preview/1/2015-10-16/ImageGridEffects/img/original/6.jpg" alt="">
+			</div>
+			<div class="img-operate">
+				<a href="#" class="magnifier"><span class="glyphicon glyphicon-zoom-in pull-left operate"></span></a>
+				<a href="#"><span class="glyphicon glyphicon-trash pull-right operate"></span></a>
+			</div>
+		</div>
+
+		<div class="image-item">
+			<div class="img-box">
+				<img src="http://www.17sucai.com/preview/1/2015-10-16/ImageGridEffects/img/original/6.jpg" alt="">
+			</div>
+			<div class="img-operate">
+				<a href="#" class="magnifier"><span class="glyphicon glyphicon-zoom-in pull-left operate"></span></a>
+				<a href="#"><span class="glyphicon glyphicon-trash pull-right operate"></span></a>
+			</div>
+		</div>
+
+		<div class="image-item">
+			<div class="img-box">
+				<img src="http://www.17sucai.com/preview/1/2015-10-16/ImageGridEffects/img/original/6.jpg" alt="">
+			</div>
+			<div class="img-operate">
+				<a href="#" class="magnifier"><span class="glyphicon glyphicon-zoom-in pull-left operate"></span></a>
+				<a href="#"><span class="glyphicon glyphicon-trash pull-right operate"></span></a>
+			</div>
+		</div>
+
+		<div class="image-item">
+			<div class="img-box">
+				<img class="cc-img" src="http://www.17sucai.com/preview/1/2015-10-16/ImageGridEffects/img/original/6.jpg" alt="">
+			</div>
+			<div class="img-operate">
+				<a href="#" class="magnifier"><span class="glyphicon glyphicon-zoom-in pull-left operate"></span></a>
+				<a href="#"><span class="glyphicon glyphicon-trash pull-right operate"></span></a>
+			</div>
+		</div>
+
+		<div class="image-item">
+			<div class="img-box">
+				<img src="http://www.17sucai.com/preview/1/2015-10-16/ImageGridEffects/img/original/6.jpg" alt="">
+			</div>
+			<div class="img-operate">
+				<a href="#" class="magnifier"><span class="glyphicon glyphicon-zoom-in pull-left operate"></span></a>
+				<a href="#"><span class="glyphicon glyphicon-trash pull-right operate"></span></a>
+			</div>
+		</div>
+
+		<script>
+			$('.magnifier').click(function(){
+				var this_url = $(this).parent().parent().children().first().children().attr('src');
+				$('#is_img').attr("src",this_url);
+				$('body').attr('position','relative');
+				$('#show_img').css('width',document.documentElement.clientWidth +'px');
+				$('#show_img').css('height',document.documentElement.clientHeight+'px');
+				$('#img_box').css('line-height',document.documentElement.clientHeight+'px');
+				$('#show_img').fadeIn("slow");
+			});
+		</script>
+
+	</div>
+
+	<!-- footer -->
+	<div id="footer">
+
+		<div class="for-record">
+			@copy chicho 2017 粤ICP备16020344号-1
+		</div>
+
+	</div>
+
+</div>
+
+<div id="show_img" style="z-index: 999;background-color: rgba(0,0,0,0.3);position:absolute;left: 0;top: 0; display: none;" onclick="$(this).fadeOut('slow');">
+	<div id="img_box" style="margin: auto;max-width: 80%;min-height: 100%;vertical-align:middle;">
+		<img style="width: 100%;vertical-align:middle; " id="is_img" src="" alt="">
+	</div>
+</div>
+
+
+<script>
+
+    //$(document).ready(function(){
+        /*$.get(handleUrl('admin/images_list'), '',
+            function(data){
+                var retData = handlRet(data);
+                
+                $.each(retData.retData,function(index,item){
+                    StrHtml += "<div class='image-item'><div class='img-box'>" +
+                        "<img src='http://yinshan.oss-cn-shenzhen.aliyuncs.com/"+item.url +"' alt=''>" +
+                        "</div><div class='img-operate'><a href='#' class='magnifier'><span class='glyphicon glyphicon-zoom-in pull-left operate'>" +
+                        "</span></a><a href='#'><span class='glyphicon glyphicon-trash pull-right operate'></span></a></div></div>";*/
+                     var StrHtml = '';
+                     StrHtml += "<a href='#' class='magnifier'>测试</a>";
+                     $('.container').append(StrHtml);
+                     console.log(StrHtml);
+
+                /*});
+                if (StrHtml == ''){
+                    errorTip("没有图片");
+                    $('.container').append("没有图片");
+                }else{*/
+                    
+                //}
+            //}
+        //);
+
+        $('.magnifier').click(function(){
+            var this_url = $(this).parent().parent().children().first().children().attr('src');
+            $('#is_img').attr("src",this_url);
+            $('body').attr('position','relative');
+            $('#show_img').css('width',document.documentElement.clientWidth +'px');
+            $('#show_img').css('height',document.documentElement.clientHeight+'px');
+            $('#img_box').css('line-height',document.documentElement.clientHeight+'px');
+            $('#show_img').fadeIn("slow");
+        });
+
+
+    //});
+
+
+
+</script>
+
+
+
+	
+</body>
+</html>

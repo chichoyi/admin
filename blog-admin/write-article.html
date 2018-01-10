@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>write-blog-admin</title>
+	<link href="./css/bootstrap.css" rel="stylesheet" >
+	<link href="./css/admin_common.css" rel="stylesheet">
+	<link href="./css/admin_editor.css" rel="stylesheet">
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script src="./js/bootstrap.js"></script>
+
+	<script src="./js/marked.js"></script>
+	<script src="./js/ace/ace.js"></script>
+	<link href="./css/markdown.css" rel="stylesheet" >
+
+	<script src="./js/bootstrap-select.min.js"></script>
+	<link rel="stylesheet" href="./css/bootstrap-select.min.css">
+
+</head>
+<body>
+
+
+<div id="container-left">
+
+	<div id="admin-logo">
+		<img src="https://pigjian.com/images/default_avatar.png" alt="">
+	</div>
+
+	<div id="left-nav">
+
+		<a href="#" class="nav-a">
+			<div class="nav-item">
+				<span class="glyphicon glyphicon-th-list margin-right-10"></span>   
+				  图片管理 
+				<span class="glyphicon glyphicon-chevron-right set-right"></span>
+			</div>
+		</a>
+
+		<a href="#" class="nav-a">
+			<div class="nav-item">
+				<span class="glyphicon glyphicon-th-list margin-right-10"></span>   
+				  文章管理
+				<span class="glyphicon glyphicon-chevron-right set-right"></span>
+			</div>
+		</a>
+
+		<a href="#" class="nav-a">
+			<div class="nav-item">
+				<span class="glyphicon glyphicon-th-list margin-right-10"></span>
+				  我是导航
+				<span class="glyphicon glyphicon-chevron-right set-right"></span>
+			</div>
+		</a>
+
+	</div>
+
+</div>
+
+<div id="container">
+
+	<!-- pc header nav-->
+	<div id="blog-header">
+		<div id="blog-nav">
+			<!-- <div id="left-nav">
+				<div class="item-nav"><a href="#">首页</a></div>
+				<div class="item-nav"><a href="#">文章</a></div>
+				<div class="item-nav"><a href="#">标签</a></div>
+				<div class="item-nav"><a href="#">分享</a></div>
+			</div> -->
+			<div id="right-nav">
+				<div class="item-nav"><a href="#">注册</a></div>
+				<div class="item-nav"><a href="#">登录</a></div>
+				<div class="search"><input type="text" placeholder="search"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- mobile nav -->
+	<nav class="navbar navbar-default" id="mobile-nav" role="navigation">
+		<div class="container-fluid"> 
+			<div class="navbar-header" id="mobile-header">
+				<button id="cc-button-nav" type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#chicho-navbar-collapse">
+					<span class="icon-bar" style="background-color: #fff;"></span>
+					<span class="icon-bar" style="background-color: #fff;"></span>
+					<span class="icon-bar" style="background-color: #fff;"></span>
+				</button>
+				<a class="navbar-brand" style="color: #fff;" href="#">chicho</a>
+			</div>
+			<div class="collapse navbar-collapse" id="chicho-navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#" style="color: #fff;">首页</a></li>
+					<li><a href="#" style="color: #fff;">文章</a></li>
+					<li><a href="#" style="color: #fff;">标签 </a></li>
+					<li><a href="#" style="color: #fff;">分享 </a></li>
+					<li><a href="#" style="color: #fff;">登录 </a></li>
+					<li><a href="#" style="color: #fff;">注册 </a></li>
+				</ul>
+			</div>
+		</div>
+	</nav> 
+
+	<!-- 面包屑导航  -->
+	<ol class="breadcrumb margin-bottom-0">
+	    <li><a href="#">Home</a></li>
+	    <li><a href="#">文章</a></li>
+	    <li class="active">写文章</li>
+	</ol>
+
+
+
+	<div id="content">
+
+	<div class="alert alert-warning margin-bottom-0" id="alert-tip" style="display: none;">
+		<!-- <a href="#" class="close" data-dismiss="alert">
+			&times;
+		</a> -->
+		<strong class="sub-tip">温馨提示: 请输入文章标题</strong>
+	</div>
+
+
+	<form action="#" id="article">
+
+		<div id="article-info">
+
+			<button class="btn btn-default btn-block pull-right" id="article-submit-m" type="submit">保存</button>
+
+			<input type="text" name="title" class="form-control pull-left" id="article-title" placeholder="请输入文章标题">
+
+			<select name="cover" class="form-control pull-left" id="article-cover">
+				<option value="">请选择文章封面</option>
+				<option value="1">这一张</option>
+				<option value="1">这一张</option>
+			</select>
+
+			<button class="btn btn-default pull-right" id="article-submit" type="submit">保存</button>
+
+		</div>
+
+		<div id="article-description">
+
+			<input type="text" name="description" class="form-control pull-left" id="description" placeholder="请输入文章描述">
+			
+			<div class="col-lg-10 pull-left" id="article-tag" style="padding: 8px 0;">
+		        <select name="tags" id="maxOption5" class="selectpicker show-menu-arrow form-control" multiple data-max-options="5" title="请选择标签">
+		          <option>chicken</option>
+		          <option>turkey</option>
+		          <option>duck</option>
+		          <option>goose1</option>
+		          <option>goose2</option>
+		          <option>goose3</option>
+		        </select>
+		    </div>
+			<!-- <select id="maxOption2 article-tag" name="tags" class="selectpicker show-menu-arrow form-control pull-left" multiple data-max-options="3">
+	          <option>chicken</option>
+	          <option>turkey</option>
+	          <option disabled>duck</option>
+	          <option>goose</option>
+	        </select> -->
+
+			<!-- <input type="text" name="tags" class="form-control pull-left" id="article-tag" placeholder="请输入文章标签，多个请用逗号隔开"> -->
+			
+		</div>
+
+		<input type="text" name="article-content" id="article-content" hidden="hidden">
+		
+		<div id='editor-column' class='pull-left'>
+            <div id='panel-editor'>
+                                        <!--编辑区-->
+                <div class="editor-content" id="mdeditor" ></div>
+
+            </div> 
+        </div>
+
+
+		<div id='preview-column' class='pull-right'>
+            <div id='panel-preview'>
+                                        <!--显示区-->
+                <div id="preview" class="markdown-body"></div>
+
+            </div>
+        </div>
+
+    </form>
+	</div>
+
+
+	<!-- footer -->
+	<div id="footer"
+
+		<div class="for-record">
+			@copy chicho 2017 粤ICP备16020344号-1
+		</div>
+
+	</div>
+
+</div>
+
+
+<script>
+            var acen_edit = ace.edit('mdeditor'); 
+            acen_edit.setTheme('ace/theme/chrome');
+            acen_edit.getSession().setMode('ace/mode/markdown');
+            acen_edit.renderer.setShowPrintMargin(false);
+            $("#mdeditor").keyup(function() {
+                $("#preview").html(marked(acen_edit.getValue()));
+            });
+
+            $('#article-submit-m').click(function(event){
+            	validator();
+            });
+            $('#article-submit').click(function(event){
+            	validator();
+            });
+
+            function validator(){
+            	event.preventDefault();
+            	$('#article-content').val(marked(acen_edit.getValue()));
+            	
+            	$('#alert-tip').css('display','block');
+
+            	if ($('#article-title').val() == '') {
+            		$('.sub-tip').text('温馨提示：请输入文章标题');
+            		return false;
+            	}
+            	if ($('#article-cover').val() == '') {
+            		console.log('is here');
+            		$('.sub-tip').text('温馨提示：请选择文章封面');
+            		return false;
+            	}
+            	if ($('#description').val() == '') {
+            		$('.sub-tip').text('温馨提示：请输入文章描述');
+            		return false;
+            	}
+            	if ($('#maxOption5').val() == '') {
+            		$('.sub-tip').text('温馨提示：请输入文章标签');
+            		return false;
+            	}
+
+            	if ($('#article-content').val() == '') {
+            		$('.sub-tip').text('温馨提示：请输入文章内容');
+            		return false;
+            	}
+
+            	$('#alert-tip').css('display','none');
+
+            	$('#article').submit();
+
+            	return true;
+            
+            }
+</script>
+
+	
+</body>
+</html>
